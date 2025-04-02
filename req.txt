@@ -1,0 +1,6 @@
+GET http://localhost:15213/home.html HTTP/1.1\r\n
+User-Agent: curl/7.19.7 (x86_64-redhat-linux-gnu)...\r\n
+Host: localhost:15213\r\n
+Accept: */*\r\n
+Proxy-Connection: Keep-Alive\r\n
+\r\n
