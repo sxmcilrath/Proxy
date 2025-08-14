@@ -1,0 +1,29 @@
+# Multi-Threaded HTTP Proxy Server
+
+## Overview
+This project is a homemade **multi-threaded HTTP proxy server** written in C for Linux.  
+It accepts client HTTP requests, sends them to a target server, caches the response, and returns it back to the client.  
+Multiple connections are supported via **POSIX threads**. 
+Caching is handled through a homemade **LRU (Least Recently Used) cache**, improving performance with repeat requests.
+
+## Features
+- **Multi-threaded design** using `pthread` for concurrent client handling.
+- **LRU cache** implementation for storing and retrieving frequently accessed resources.
+- **HTTP/1.0 request forwarding** with header modification.
+- **Thread-safe caching** via mutex locks for shared data.
+- **TCP socket programming** for client–server communication.
+- Configurable **port number** for proxy server.
+
+## Technologies Used
+- **C** 
+- **POSIX**
+- **Linux system calls** (sockets, threads, mutexes)
+- **TCP/IP networking**
+- **Pthreads** for concurrency
+
+## File Structure
+- proxy.c - Main proxy implementation
+- csapp.c/.h - Wrapper functions for sockets, I/O, and error handling
+- Makefile - Build instructions
+- README - Original assignment/notes
+- req.txt - Sample HTTP request for testing
